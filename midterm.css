@@ -1,0 +1,54 @@
+body {
+    background: #FFFFFF;
+}
+a {
+    color: #28a745;
+    text-decoration: none;
+}
+a:hover {
+    color: #28a745;
+    text-decoration: underline;
+}
+.btn-main {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 35%;
+    margin-right: 35%;
+    width: 30%;
+}
+.btn-remove {
+    float: right;
+}
+.dog-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:10px;
+    margin-bottom: 10px;
+    max-width: 500px;
+}
+.container {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+
+    background: #dde3e7;
+    color: #000000;
+    border: 2px #f8f9fa solid;
+}
+.favorite-dog {
+    margin: 5px;
+    padding: 5px;
+    border: 2px #f8f9fa solid;
+    border-radius: 10px;
+}
+.dark {
+    background: #202020;
+    color: #f8f9fa;
+}
+.title {
+    text-align: center;
+}
+#breed-info-container {
+    display: none;
+}
