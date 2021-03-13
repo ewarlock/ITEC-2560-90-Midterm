@@ -1,4 +1,7 @@
-//TODO enable select breed button when something in drop down selected
+//TODO enable select breed button when something in drop down selected and disable when no selection
+//TODO fix the dark mode button like put it somewhere else or something it looks like shit on mobile
+//TODO finish wiki portion
+//TODO extend favorites functionality
 
 //breed search elements
 const menuDogBreedsElement = document.querySelector("#dog-breeds-menu") //drop down for breed select
@@ -96,20 +99,16 @@ btnSelectDogBreed.addEventListener("click", () => {
     dogInfo.appendChild(dogImg)
 
     //get dog breed info and put in div under img TODO!!!
-/*
-    fetch(breedInfoURL)
+let breedTestURL = breedBaseInfoURL + "Great_Dane"
+    fetch(breedTestURL)
     .then( response => response.json())
     .then(breeds => {
-        for (key in breeds.message) {
-            let breed = document.createElement("option")
-            breed.innerHTML = key
-            menuDogBreedsElement.add(breed)
-        }
+        console.log(breeds)
     })
     .catch(error => {
-        alert("Error fetching dog breed list.")
+        console.log("Error fetching dog breed list.")
         console.log(error)
-    })*/
+    })
 
 
     //put breed name and dogInfo div in global dogObject variable for use with favorites list
