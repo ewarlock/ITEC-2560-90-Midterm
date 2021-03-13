@@ -182,6 +182,9 @@ btnFavoriteElement.addEventListener("click", () => {
 //clicking remove button next to dog to remove from faves
 btnRemoveFavorite.addEventListener("click", () => {
 
+    //so user can add something back to faves right away in case they deleted by mistake...
+    btnAddToFavorites.disabled = false
+
     let breed = btnRemoveFavorite.name
     let selector = "#" + breed;
     let index
