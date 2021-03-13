@@ -1,7 +1,4 @@
-//TODO enable select breed button when something in drop down selected and disable when no selection
-//TODO fix the dark mode button like put it somewhere else or something it looks like shit on mobile
-//TODO finish wiki portion
-//TODO extend favorites functionality
+//TODO finish wiki portion?
 
 //breed search elements
 const menuDogBreedsElement = document.querySelector("#dog-breeds-menu") //drop down for breed select
@@ -88,6 +85,7 @@ btnSelectDogBreed.addEventListener("click", () => {
     dogName.classList.add("title")
     dogInfo.appendChild(dogName)
 
+
     //get dog breed img to use for img on page
     fetch(breedPictureURL)
     .then(response => response.json())
@@ -99,14 +97,17 @@ btnSelectDogBreed.addEventListener("click", () => {
     dogInfo.appendChild(dogImg)
 
     //get dog breed info and put in div under img TODO!!!
-let breedTestURL = breedBaseInfoURL + "Great_Dane"
+    //using breedTestURL for now to see if I can get it to work but
+    //if I can get it working should update to breedInfoURL
+let breedTestURL = "https://en.wikipedia.org/w/api.php?action=parse&format=json&page=Great_Dane"
     fetch(breedTestURL)
-    .then( response => response.json())
+    .then( response => {
+        response.json()})
     .then(breeds => {
         console.log(breeds)
     })
     .catch(error => {
-        console.log("Error fetching dog breed list.")
+        console.log("Error fetching dog breed info.")
         console.log(error)
     })
 
@@ -203,5 +204,3 @@ btnRemoveFavorite.addEventListener("click", () => {
     favoriteDogDiv.appendChild(btnRemoveFavorite)
     favoritesContainerElement.appendChild(favoriteDogDiv)
 })
-
-//TODO export and import favorites list ?

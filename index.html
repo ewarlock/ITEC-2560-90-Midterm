@@ -22,15 +22,12 @@
   
     <div class="container" id="dog-breeds-selection"> <!--dog breed selection-->
         <h1 class="title">Dog Breed Browser</h1>
-        <p>This tool can be used to gain insight into the personalities of different dog breeds.
-            This can be useful if you are looking at adopting a dog, or if you just want
-            to learn more about dogs in general. This tool uses 
-            <a href="https://dog.ceo/dog-api/">The Dog API</a> to generate 
-            a picture for each breed, and obtains breed personality information from Wikipedia.org.
+        
+        <p>This tool can be used to view pictures of different dog breeds, and add breeds to a favorites list. This tool uses 
+            <a href="https://dog.ceo/dog-api/">The Dog API</a> to generate a picture for each breed.
         </p>
         <label for="dog-breeds-menu">Select a Breed:</label>
         <select class="form-control" id="dog-breeds-menu" name="dog-breeds-menu">
-            <option disabled selected value>-- select a breed --</option>
         </select>
         <button class="btn btn-success btn-main" id="select-breed" name="select-breed">Select Breed</button>
     </div>
@@ -41,10 +38,12 @@
 </div>
 
 <div class="col-lg-3"> <!--col2-->
-    <button class="btn btn-outline-success container" id="dark-mode">TOGGLE DARK MODE</button>
     <div class="container" id="sidebar">
+        <button class="btn btn-outline-success container" id="dark-mode">TOGGLE DARK MODE</button>
         <h2>Favorites</h2>
-        <p id="favorites-instructions">Click "Add to Favorites" when viewing a dog breed to add it to this list.</p>
+        <p id="favorites-instructions">Click "Add to Favorites" when viewing a dog breed to add it to this list. 
+            Click the red minus button to remove a breed from the list.
+        </p>
             <div id="favorites-container"></div>
     </div>
 </div>
